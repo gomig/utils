@@ -29,3 +29,12 @@ func Contains[T comparable](items []T, item T) bool {
 	}
 	return false
 }
+
+// Alter return fallback if value is empty
+func Alter[T comparable](value T, fallback T) T {
+	var empty T
+	if value != empty {
+		return value
+	}
+	return fallback
+}

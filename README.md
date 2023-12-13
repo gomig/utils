@@ -51,6 +51,19 @@ func Contains[T comparable](items []T, item T) bool
 res := Contains[string](items, "john")
 ```
 
+### Alter
+
+Return fallback if value is empty.
+
+```go
+// Signature:
+func Alter[T comparable](value T, fallback T) T
+
+// Example:
+name := ""
+res := Alter(name, "John") // "John"
+```
+
 ## Error
 
 ### TaggedError
